@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+</head>
+<body>
+
+<h2>This page works!</h2>
+
+<form th:method="POST" th:action="@{/todo}" th:object="${addItem}">
+    <label for="content">Content: </label>
+    <input type="text" th:field="*{content}" id="content"/>
+    <br/>
+
+    <label for="description">Description: </label>
+    <input type="text" th:field="*{description}" id="description"/>
+    <br/>
+
+    <input type="submit" value="Create"/>
+</form>
+
+<h2>Your To-Do:</h2>
+
+<div th:each="item : ${items}">
+    <a th:text="${item.getContent() + ' (' + item.getDescription() + ')'}">todo-item</a>
+</div>
+
+</body>
+</html>
