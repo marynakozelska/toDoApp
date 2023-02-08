@@ -37,4 +37,23 @@ public class ToDoItemController {
         toDoItemService.addToDoItem(toDoItem);
         return "redirect:/todo";
     }
+
+    @PatchMapping("/save")
+    public String saveToDo (@ModelAttribute("todo") ToDoItem toDoItem) {
+       toDoItemService.updateToDo(toDoItem);
+        return "redirect:/todo";
+    }
+
+    @GetMapping("/update/{id}")
+    public String showUpdateForm(@PathVariable("id") int id, Model model) {
+        ToDoItem toDoItem = toDoItemService.getById(id);
+        model.addAttribute("item", toDoItem);
+        return "todo/edit";
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteToDo(@PathVariable("id") int id) {
+        toDoItemService.deleteToDo(id);
+        return "redirect:/todo";
+    }
 }

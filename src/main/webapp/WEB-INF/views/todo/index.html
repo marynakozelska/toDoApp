@@ -24,6 +24,10 @@
 
 <div th:each="item : ${items}">
     <a th:text="${item.getContent() + ' (' + item.getDescription() + ')'}">todo-item</a>
+    <a th:href="@{/todo/update/{id}(id=${item.getId()})}">Edit</a>
+    <form th:method="DELETE" th:action="@{/todo/{id}(id=${item.getId()})}">
+        <input type="submit" value="Delete"/>
+    </form>
 </div>
 
 </body>

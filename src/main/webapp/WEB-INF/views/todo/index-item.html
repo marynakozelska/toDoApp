@@ -9,5 +9,9 @@
 <h3 th:text="${item.getContent()}">Content</h3>
 <p th:text="${item.getDescription()}">Description</p>
 
+<form th:method="DELETE" th:action="@{/todo/{id}(id=${item.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+
 </body>
 </html>
