@@ -3,10 +3,14 @@ package com.app.controllers;
 import com.app.models.ToDoItem;
 import com.app.services.ToDoItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/todo")
@@ -19,41 +23,35 @@ public class ToDoItemController {
     }
 
     @GetMapping
-    public String getAll(@ModelAttribute("addItem") ToDoItem toDoItem, Model model) {
-        model.addAttribute("items", toDoItemService.getAll());
-        return "todo/index";
+    public ResponseEntity<List<ToDoItem>> getAll() {
+        List<ToDoItem> toDoItemList = toDoItemService.getAll();
+        return new ResponseEntity<>(toDoItemList, HttpStatus.OK);
     }
 
+//    TODO:
     @GetMapping("/{id}")
-    public String getById(@PathVariable int id, Model model) {
-        model.addAttribute("item", toDoItemService.getById(id));
-        return "todo/index-item";
+    public ResponseEntity<ToDoItem> getById(@PathVariable int id) {
+        ToDoItem toDoItem = toDoItemService.getById(id);
+        return new ResponseEntity<>(toDoItem, HttpStatus.OK);
     }
 
     @PostMapping
-    public String addToDo(@ModelAttribute("addItem") ToDoItem toDoItem, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) return "todo/index";
+    public ResponseEntity<ToDoItem> addToDo(@RequestBody ToDoItem toDoItem) {
+//        if (bindingResult.hasErrors()) return "todo/index";
 
-        toDoItemService.addToDoItem(toDoItem);
-        return "redirect:/todo";
+        ToDoItem newToDoItem = toDoItemService.addToDoItem(toDoItem);
+        return new ResponseEntity<>(newToDoItem, HttpStatus.CREATED);
     }
 
-    @PatchMapping("/save")
-    public String saveToDo (@ModelAttribute("todo") ToDoItem toDoItem) {
-       toDoItemService.updateToDo(toDoItem);
-        return "redirect:/todo";
-    }
-
-    @GetMapping("/update/{id}")
-    public String showUpdateForm(@PathVariable("id") int id, Model model) {
-        ToDoItem toDoItem = toDoItemService.getById(id);
-        model.addAttribute("item", toDoItem);
-        return "todo/edit";
+    @PutMapping("/update")
+    public ResponseEntity<ToDoItem> update(@RequestBody ToDoItem toDoItem) {
+        ToDoItem newToDoItem = toDoItemService.updateToDo(toDoItem);
+        return new ResponseEntity<>(newToDoItem, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteToDo(@PathVariable("id") int id) {
+    public ResponseEntity<?> deleteToDo(@PathVariable("id") int id) {
         toDoItemService.deleteToDo(id);
-        return "redirect:/todo";
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

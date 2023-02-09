@@ -27,20 +27,20 @@ public class ToDoItemService {
         return toDoItemRepository.getById(id);
     }
 
-    public void addToDoItem(ToDoItem toDoItem) {
-        toDoItemRepository.save(toDoItem);
+    public ToDoItem addToDoItem(ToDoItem toDoItem) {
+        return toDoItemRepository.save(toDoItem);
     }
 
     public void deleteToDo(int id) {
         toDoItemRepository.deleteById(id);
     }
 
-    public void updateToDo(ToDoItem inputToDoItem) {
+    public ToDoItem updateToDo(ToDoItem inputToDoItem) {
         ToDoItem temporaryToDoItem = toDoItemRepository.getById(inputToDoItem.getId());
 
         temporaryToDoItem.setContent(inputToDoItem.getContent());
         temporaryToDoItem.setDescription(inputToDoItem.getDescription());
 
-        toDoItemRepository.save(temporaryToDoItem);
+        return toDoItemRepository.save(temporaryToDoItem);
     }
 }

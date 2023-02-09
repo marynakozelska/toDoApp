@@ -9,14 +9,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="809d28af-1d1c-46d0-af8d-3eaaf3531b39" name="Changes" comment="First commit: Simple responsive form, adding new to-do items to the database">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/edit.html" afterDir="false" />
+    <list default="true" id="809d28af-1d1c-46d0-af8d-3eaaf3531b39" name="Changes" comment="Added update and delete methods">
+      <change afterPath="$PROJECT_DIR$/angular2/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/main/main.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/main/main.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/main/main.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/main/main.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/to-do-item/to-do-item.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/to-do-item/to-do-item.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/app/to-do-item/to-do-item.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/angular2/tsconfig.spec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/config/SpringConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/controllers/ToDoItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/controllers/ToDoItemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/services/ToDoItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/services/ToDoItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/index-item.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/index-item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/todo/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,31 +95,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Idea/Courses/linked-in-learning-full-stack-app-angular-spring-boot&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29883945&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;bb7de6717e3b8c5443418c418cbdde4c&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Projects/Idea/Courses/linked-in-learning-full-stack-app-angular-spring-boot",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.29883945",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "spring.configuration.checksum": "bb7de6717e3b8c5443418c418cbdde4c",
+    "ts.external.directory.path": "D:\\Projects\\Idea\\Demos\\toDoApp\\angular2\\node_modules\\typescript\\lib"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Idea\Demos\toDoApp\angular2\src\app\to-do-item" />
+      <recent name="D:\Projects\Idea\Demos\toDoApp" />
+      <recent name="D:\Projects\Idea\Demos\toDoApp\src\main\webapp\WEB-INF\views\angular2\src" />
       <recent name="D:\Projects\Idea\Demos\toDoApp\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
@@ -203,7 +234,9 @@
       <workItem from="1675588936203" duration="8432000" />
       <workItem from="1675691551021" duration="1208000" />
       <workItem from="1675783266984" duration="650000" />
-      <workItem from="1675844075512" duration="3329000" />
+      <workItem from="1675844075512" duration="7165000" />
+      <workItem from="1675944054849" duration="2993000" />
+      <workItem from="1675947792894" duration="22406000" />
     </task>
     <task id="LOCAL-00001" summary="First commit: Simple responsive form, adding new to-do items to the database">
       <created>1675533075866</created>
@@ -212,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675533075866</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added update and delete methods">
+      <created>1675847679587</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675847679587</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +272,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First commit: Simple responsive form, adding new to-do items to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit: Simple responsive form, adding new to-do items to the database" />
+    <MESSAGE value="Added update and delete methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added update and delete methods" />
   </component>
 </project>

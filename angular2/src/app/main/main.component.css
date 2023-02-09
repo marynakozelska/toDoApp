@@ -1,0 +1,14 @@
+.container {
+  background: #99abac;
+  padding: 2%;
+}
+
+.todo-item {
+  margin: 2%;
+  padding: 2%;
+
+  border: solid white 0;
+  border-radius: 10px;
+
+  background: aliceblue;
+}
